@@ -1,0 +1,39 @@
+# Table 1 ("Data sets collected and processed through standardized pipeline") from
+# Duvallet, Gibbons, Gurry, Irizarry, Alm (2017), Nat Commun 8:1784,
+# doi:10.1038/s41467-017-01973-8 (PMC5716994).
+# Hand-verified against the live PMC page (https://pmc.ncbi.nlm.nih.gov/articles/PMC5716994/)
+# by Pablo Pena Fraga on 2026-09-10. Not re-fetched or re-derived by a tool.
+# Raw source: docs/datasets_table.csv (same values; header/column names renamed
+# here to this fixture's schema -- see tests/test_table1_fixture.py for the
+# byte-identity check between the two).
+dataset_id,controls_label,n_controls,cases_label,n_cases,reference
+"Singh 2015, EDD",H,82,EDD,201,35
+"Schubert 2014, CDI",H,154,CDI,93,33
+"Schubert 2014, non-CDI",H,154,non-CDI,89,33
+"Vincent 2013, CDI",H,25,CDI,25,34
+"Youngster 2014, CDI",H,4,CDI,19,18
+"Goodrich 2014, OB",H,428,OB,185,43
+"Turnbaugh 2009, OB",H,61,OB,195,42
+"Zupancic 2012, OB",H,96,OB,101,44
+"Ross 2015, OB",H,26,OB,37,45
+"Zhu 2013, OB",H,16,OB,25,1
+"Baxter 2016, CRC",H,172,CRC,120,20
+"Zeller 2014, CRC",H,75,CRC,41,21
+"Wang 2012, CRC",H,54,CRC,44,8
+"Chen 2012, CRC",H,22,CRC,21,23
+"Gevers 2014, IBD",non-IBD,16,CD,146,26
+"Morgan 2012, IBD",H,18,"UC, CD",108,27
+"Papa 2012, IBD",non-IBD,24,"UC, CD",66,19
+"Willing 2010, IBD",H,35,"UC, CD",45,28
+"Noguera-Julian 2016, HIV",H,34,HIV,205,39
+"Dinh 2015, HIV",H,15,HIV,21,41
+"Lozupone 2013, HIV",H,13,HIV,23,40
+"Son 2015, ASD",H,44,ASD,59,7
+"Kang 2013, ASD",H,20,ASD,19,2
+"Alkanani 2015, T1D",H,55,T1D,57,59
+"Mejia-Leon 2014, T1D",H,8,T1D,21,60
+"Wong 2013, NASH",H,22,NASH,16,61
+"Zhu 2013, NASH",H,16,NASH,22,1
+"Scher 2013, ART",H,28,"PSA, RA",86,52
+"Zhang 2013, LIV",H,25,"CIRR, MHE",46,51
+"Scheperjans 2015, PAR",H,74,PAR,74,9

@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # astral-sh/setup-uv publishes no floating major-version tag (e.g. "v10"),
+      # only exact semver tags -- pinned to the latest of those instead.
+      - uses: astral-sh/setup-uv@v10.1.0
+
+      # --locked: fail if pyproject.toml and uv.lock have drifted, rather than
+      # silently re-resolving and testing against un-pinned versions.
+      - run: uv sync --locked
+      - run: uv run ruff check
+      - run: uv run ruff format --check
+      - run: uv run pytest
+
+      # Structural DAG check only -- no network, no real data. The real end-to-end pipeline run is a
+      # separate, manual step, deliberately not run on every push: Zenodo's
+      # intermittent 504 gateway time-outs would make every PR flaky through
+      # no fault of the code.
+      - run: uv run snakemake -n --forceall
