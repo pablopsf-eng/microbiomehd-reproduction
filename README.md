@@ -1,5 +1,7 @@
 # MicrobiomeHD reproduction
 
+[![CI](https://github.com/pablopsf-eng/microbiomehd-reproduction/actions/workflows/ci.yml/badge.svg)](https://github.com/pablopsf-eng/microbiomehd-reproduction/actions/workflows/ci.yml)
+
 An independent reproduction of Duvallet et al. (2017), *Nature Communications*,
 `10.1038/s41467-017-01973-8` — a meta-analysis of 28 case-control gut microbiome
 studies — followed by one extension question.
